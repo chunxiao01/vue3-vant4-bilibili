@@ -1,4 +1,6 @@
-# vue3-202205
+# vue3-vant4-bilibili
+
+### 基于 Vue3.x 和 Vant4.x 模仿 bilibili 小程序
 
 ## Project setup
 
