@@ -13,7 +13,6 @@ enum eHomeApi {
 /**
  * 获取首页-热门-视频列表
  */
-import axios from "axios";
 const hotvideoListRequest = (params: IHotVideoListRequest) => {
   return myRequestInstance.get({
     url: eHomeApi.HotVideoList,
