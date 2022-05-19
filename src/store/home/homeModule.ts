@@ -11,6 +11,7 @@ const HomeModule: Module<IHomeState, IrootState> = {
   namespaced: true, //开启命名空间
   state() {
     return {
+      data: "",
       hotvideoList: []
     };
   },
