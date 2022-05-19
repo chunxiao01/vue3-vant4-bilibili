@@ -157,7 +157,7 @@ class MyRequest {
 
   //封装get请求
   get(config: MyrequsetConfig) {
-    this.request({
+    return this.request({
       ...config,
       method: "get"
     });
@@ -165,7 +165,7 @@ class MyRequest {
 
   //封装post请求
   post(config: MyrequsetConfig) {
-    this.request({
+    return this.request({
       ...config,
       method: "post"
     });
@@ -173,7 +173,7 @@ class MyRequest {
 
   //封装delete请求
   delete(config: MyrequsetConfig) {
-    this.request({
+    return this.request({
       ...config,
       method: "delete"
     });
@@ -181,7 +181,7 @@ class MyRequest {
 
   //封装patch请求
   patch(config: MyrequsetConfig) {
-    this.request({
+    return this.request({
       ...config,
       method: "patch"
     });

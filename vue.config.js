@@ -1,6 +1,6 @@
-const path = require("path");
+const path = require("path")
 
-const { defineConfig } = require("@vue/cli-service");
+const { defineConfig } = require("@vue/cli-service")
 
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -13,7 +13,7 @@ module.exports = defineConfig({
       .set("common", "@/common")
       .set("components", "@/components")
       .set("network", "@/network")
-      .set("views", "@/views");
+      .set("views", "@/views")
   },
   devServer: {
     proxy: {
@@ -21,10 +21,10 @@ module.exports = defineConfig({
         //代理 访问接口，仅用于本地测试
         target: "https://api.bilibili.com/x/web-interface",
         pathRewrite: {
-          "^/api": "",
+          "^/api": ""
         },
-        changeOrigin: true,
-      },
-    },
-  },
-});
+        changeOrigin: true
+      }
+    }
+  }
+})
