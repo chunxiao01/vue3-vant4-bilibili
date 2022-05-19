@@ -1,9 +1,15 @@
 import { createStore } from "vuex";
 
-export default createStore({
+import type { IrootState } from "./types";
+
+import { HomeModule } from "./home/homeModule";
+
+export default createStore<IrootState>({
   state: {},
   getters: {},
   mutations: {},
   actions: {},
-  modules: {}
+  modules: {
+    HomeModule
+  }
 });
