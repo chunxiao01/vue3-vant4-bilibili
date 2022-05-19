@@ -1,11 +1,10 @@
 const path = require("path")
-// function resolve(dir) {
-//   return path.join(__dirname, dir);
-// }
+
 const { defineConfig } = require("@vue/cli-service")
+
 module.exports = defineConfig({
   transpileDependencies: true,
-  runtimeCompiler: true, //开启运行时编译
+  productionSourceMap: false,
   chainWebpack: (config) => {
     //配置别名
     config.resolve.alias
@@ -15,5 +14,17 @@ module.exports = defineConfig({
       .set("components", "@/components")
       .set("network", "@/network")
       .set("views", "@/views")
+  },
+  devServer: {
+    proxy: {
+      "/api": {
+        //代理 访问接口，仅用于本地测试
+        target: "https://api.bilibili.com/x/web-interface",
+        pathRewrite: {
+          "^/api": ""
+        },
+        changeOrigin: true
+      }
+    }
   }
 })

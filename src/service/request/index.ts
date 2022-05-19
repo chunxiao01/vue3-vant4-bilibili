@@ -126,7 +126,9 @@ class MyRequest {
       (res) => {
         return res;
       },
-      (err) => {}
+      (err) => {
+        return err;
+      }
     );
   }
 
@@ -147,6 +149,7 @@ class MyRequest {
           resolve(res);
         })
         .catch((err) => {
+          console.log(err);
           reject(err);
         });
     });
@@ -156,7 +159,7 @@ class MyRequest {
   get(config: MyrequsetConfig) {
     this.request({
       ...config,
-      method: "GET"
+      method: "get"
     });
   }
 
@@ -164,7 +167,7 @@ class MyRequest {
   post(config: MyrequsetConfig) {
     this.request({
       ...config,
-      method: "POST"
+      method: "post"
     });
   }
 
@@ -172,7 +175,7 @@ class MyRequest {
   delete(config: MyrequsetConfig) {
     this.request({
       ...config,
-      method: "DELETE"
+      method: "delete"
     });
   }
 
@@ -180,7 +183,7 @@ class MyRequest {
   patch(config: MyrequsetConfig) {
     this.request({
       ...config,
-      method: "PATCH"
+      method: "patch"
     });
   }
 }

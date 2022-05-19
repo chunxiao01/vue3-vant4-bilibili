@@ -4,6 +4,10 @@ import { BASE_URL, TIME_OUT } from "./request/config";
 const myRequestInstance = new MyRequest({
   baseURL: BASE_URL,
   timeout: TIME_OUT,
+  // headers: {
+  //   "X-Requested-With": "XMLHttpRequest",
+  //   "Content-Type": "text/plain"
+  // },
   intercepotors: {
     requestInterceptor(config) {
       //请求成功拦截器，验证token
